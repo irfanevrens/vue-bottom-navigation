@@ -245,7 +245,7 @@ function cssLoader() {
   head.appendChild(style);
 }
 function handleLabelClick(button: CurvedOption) {
-  if (!showable.value || button.isActive) {
+  if ((!showable.value || button.isActive) && hasChild(button)) {
     toggleClass();
   }
 
